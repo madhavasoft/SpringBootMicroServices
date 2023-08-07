@@ -64,4 +64,6 @@ public class UserResourceController {
 	public void removeById(@PathVariable int id) {
 		service.removeById(id);
 	}
+	
+	
 }

@@ -52,10 +52,29 @@
 		</dependency>
 		
 		<!--Documentatioin- http://localhost:8080/swagger-ui/index.html-->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			 <version>2.1.0</version>
+		</dependency>-->
+		
+		<!--Content Negotiation- to change the response type in the formats like xml, json -->
+		<!--<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>-->
+		
+		<!--Monitoring API's using Actuators 
+		http://localhost:8080/actuator  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!--Exploring API's using HAL(Hypertext Application Language Explorer -->
+		<!--http://localhost:8080/-->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-hal-explorer</artifactId>
 		</dependency>
 	</dependencies>
 
