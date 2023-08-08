@@ -19,7 +19,7 @@ public class User {
 	@GeneratedValue
 	private Integer id;
 	@Size(min = 2, message = "Name should have atleast 2 characters")
-	@JsonProperty("json-user-name") //static filtering
+//	@JsonProperty("json-user-name") //static filtering
 	private String name;
 	@Past(message = "Birth Date should be in the past")
 	private LocalDate birthDate;
