@@ -61,11 +61,11 @@
 		</dependency>
 
 		<!--Documentatioin- http://localhost:8080/swagger-ui/index.html-->
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			 <version>2.1.0</version>
-		</dependency>-->
+		</dependency>
 
 		<!--Content Negotiation- to change the response type in the formats like xml, json -->
 		<!--<dependency>
@@ -87,10 +87,10 @@
 		</dependency>
 		<!--Implementing Spring Security -->
 		<!-- after restarting the server the password will generated in the Console-->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 
 	<build>
