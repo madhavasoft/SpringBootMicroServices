@@ -1,13 +1,15 @@
 package com.madhavasoft.rest.webservices.restfulwebservices.user;
 
 import java.time.LocalDate;
+import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 @Entity(name="user_details") // URL for H2 DB Configuration is - http://localhost:8080/h2-console
@@ -22,6 +24,18 @@ public class User {
 	@Past(message = "Birth Date should be in the past")
 	private LocalDate birthDate;
 
+	@OneToMany(mappedBy = "user")
+	@JsonIgnore
+	private List<Post> posts;
+	
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+
 	public User() {
 		super();
 	}
@@ -32,7 +46,7 @@ public class User {
 		this.name = name;
 		this.birthDate = birthDate;
 	}
-
+	
 	public Integer getId() {
 		return id;
 	}
